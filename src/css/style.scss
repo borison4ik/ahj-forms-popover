@@ -1,0 +1,64 @@
+body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(199, 199, 199);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  background-color: rgb(179, 50, 50);
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  box-shadow: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.popover {
+  position: absolute;
+  width: 100%;
+  max-width: 275px;
+  z-index: 1000;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(6px) translateY(5px) rotate(-135deg);
+    width: 9px;
+    height: 9px;
+    background-color: #fff;
+    border-top: 1px solid #666;
+    border-left: 1px solid #666;
+    z-index: 1090;
+  }
+}
+.popover-wrapper {
+  border-radius: 8px;
+  border: 1px solid #666;
+  background-color: #fff;
+  overflow: hidden;
+}
+.popover-header {
+  margin: 0;
+  padding: 8px;
+  background-color: rgb(180, 180, 180);
+}
+.popover-body {
+  padding: 8px;
+}
